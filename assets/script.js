@@ -29,7 +29,7 @@
                 trigger.addEventListener( 'click', toggleContent );
 
                 // For Demo purposes only (prevent jump on click)
-                [].slice.call( document.querySelectorAll('.items-wrap a') ).forEach( function(el) { el.onclick = function() { return false; } } );
+                // [].slice.call( document.querySelectorAll('.items-wrap a') ).forEach( function(el) { el.onclick = function() { return false; } } );
             })();
 
             

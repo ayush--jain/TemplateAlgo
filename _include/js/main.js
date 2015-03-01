@@ -271,7 +271,7 @@ BRUSHED.goSection = function(){
 		$target = $($(this).attr('href')).offset().top-30;
 		
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
-		return false;
+		return true;
 	});
 }
 
