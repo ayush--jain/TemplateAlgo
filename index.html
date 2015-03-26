@@ -58,7 +58,7 @@
 <link rel="apple-touch-icon" sizes="114x114" href="#">
 <link rel="apple-touch-icon" sizes="72x72" href="#">
 <link rel="apple-touch-icon" sizes="144x144" href="#">
-
+<link rel="stylesheet" href="timer/compiled/flipclock.css">
 <!-- Modernizr -->
 <script src="_include/js/modernizr.js"></script>
 
@@ -76,6 +76,28 @@
   })();
 
 </script>
+<script type="text/javascript">
+		var clock;
+		
+		$(document).ready(function() {
+			var clock;
+
+			clock = $('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('It\'s time for Algorhythm')
+		        	}
+		        }
+		    });
+				    
+		    clock.setTime(220880);
+		    clock.setCountdown(true);
+		    clock.start();
+
+		});
+	</script>
 <!-- End Analytics -->
 <!-- Header -->
 <header>
@@ -86,6 +108,7 @@
             <ul id="menu-nav">
                 <li class="current"><a href="#home-slider">Home</a></li>
                 <li><a href="events.html" class="external">Events</a></li>
+                 <li><a href="gallery/" class="external">Gallery</a></li>
                 <li><a href="about.html" class="external">About Us</a></li>
                 <li><a href="contact.html" class="external">Contact</a></li>
                 <li><a href="sponsors.html" class="external">Sponsors</a></li>
@@ -132,7 +155,8 @@
 <!-- About Section -->
 
 
-
+<div class="clock" style="height: 100px;"></div>
+	<div class="message"></div>
 
 
 
@@ -144,10 +168,9 @@
                 <div class="span12">
                     <nav id="social">
                         <ul>
-                            <li><a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
-                            <li><a href="https://www.facebook.com/Bluxart" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
-                            <li><a href="https://plus.google.com/105500420878314068694" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
-                            <li><a href="#"><span class="font-icon-social-youtube"></span></a></li>
+                            <li><a href="https://twitter.com/https://twitter.com/algorhythm_jmi" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
+                            <li><a href="https://www.facebook.com/jmi.algorhythm" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
+                            <li><a href="https://www.youtube.com/user/algorhythmjmi"><span class="font-icon-social-youtube"></span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -179,6 +202,8 @@
 <script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
 <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
 <script src="_include/js/main.js"></script> <!-- Default JS -->
+<script src="timer/compiled/flipclock.min.js"></script>
+
 <!-- End Js -->
 
 </body>
